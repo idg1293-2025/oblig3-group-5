@@ -1,17 +1,6 @@
-.city {
-  position: absolute;
-  bottom: 0;
-  left: 300vw;
-  width: 400vw;
-  display: flex;
-  padding: 0 60px;
-}
 .city__building {
-  position: absolute;
   background-color: black;
   border: 2px solid;
-  justify-content: center;
-  padding: 10px;
 }
 .city__building--tall {
   width: 10vw;

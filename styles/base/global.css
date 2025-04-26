@@ -1,4 +1,6 @@
 :root {
+  --text-color1: black;
+  --text-color2: white;
   --color-building: black;
   --color-windows: Yellow;
 }

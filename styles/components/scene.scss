@@ -1,30 +1,144 @@
-
-
-.scene::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: red;
-  }
-
-  body {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+  
+.scene {
+  width: 100%;
+  &__1 {
     height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        #b0c4de 0%,
+        #b0c4de 70%,
+        #deb887 70%,
+        #deb887 100%
+      );
+    &.header {
+      align-items: center;
+    }
+    .window {
+      width: 50%;
+      top: 4%;
+      left: 25%;
+      position: absolute;
+    }
+  }
+  &__2 {
+    height: 400vh;
+    background: linear-gradient(to bottom, rgb(170, 200, 102), lightblue,)
+  }
+  &__3 {
+    height: 400vh;
+    background: linear-gradient(to bottom, lightblue, rgb(39, 175, 221));
+  }
+  &__4 {
+    height: 200vh;
+    background: lightblue;
+  }
+}
+
+.road {
+  background-color: #504a4a;
+  height: 400vh;
+  width: 30%;
+  position: relative;
+  margin: 0 auto;
+  top: 20%;
+  
+  &__lane-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0.5em;
+    height: 100%;
+    background: repeating-linear-gradient(
+      to bottom,
+      yellow,
+      yellow 20px,
+      transparent 20px,
+      transparent 40px
+    );
+    transform: translateX(-50%);
+  }
+  &__side-line-left {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    width: 8px;
+    height: 100%;
+    background: white;
+  }
+  &__side-line-right {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    width: 8px;
+    height: 100%;
+    background: white;
+  }
+}
+
+.car {
+    position: sticky;
+    width: 27%;
+    top: 50%;
+    transform: translate(60%, -22%);
+    z-index: 2;
+    transition: transform 0.8s ease, left 0.8s ease;
+    animation: truckScrollMotion linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0% 100%;
+  }
+
+  @keyframes truckScrollMotion {
+    0% {
+      transform: translate(4vw, -22%);
+    }
+    20% {
+      transform: translate(4vw, -22%); /* ➡ goes right */
+    }
+    30% {
+      transform: translate(20vw, -48%); /* ➡ goes far right */
+    }
+    35% {
+      transform: translate(4vw, -48%); /* ➡ goes far right */
+    }
+    60% {
+      transform: translate(4vw, -14%); /* ⬅ goes left */
+    }
+    80% {
+      transform: translate(60vw, -10%); /* ⬇ returns to lane, further down */
+    }
   }
   
-  .scene {
-    scroll-snap-align: start;
+  .oil-spill {
+    position: absolute;
+    width: 40%;
+    top: 42%;
+    left: 5%;
+  }
+
+  .plane {
+    position: sticky;
+    z-index: 3;
+    top: 60%;
+    width: 45%;
+    left: 43.5%;
+    transform: translateX(-50%);
+    animation: planeScrollMotion linear forwards;
+    animation-timeline: scroll();
+    animation-range: 10% 100%;
+  }
+
+  @keyframes planeScrollMotion {
+    0% {
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+      transform: translate(-50%, -60%) scale(1);
+    }
   }
   
-  .scene {
-    position: relative; /* required for ::after to be positioned correctly */
-    height: 100vh;       /* or however tall your scene is */
-    width: 100vw;
-  }
+  
+ 
+  
   
 
-  
+

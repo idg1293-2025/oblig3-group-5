@@ -1,1 +1,74 @@
-/*# sourceMappingURL=button.css.map */
+.question-box {
+  position: relative;
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  background: #f9f9f9;
+  transition: background 0.3s;
+}
+.question-box__button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #007acc;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.question-box__button:hover {
+  background: #005fa3;
+}
+.question-box__question {
+  display: none;
+  margin-top: 2rem;
+}
+.question-box__question.visible {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+.question-box__question-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.question-box__question-list {
+  list-style: none;
+  padding: 0;
+}
+.question-box__question-list .question__answer {
+  margin-bottom: 0.5rem;
+}
+.question-box__question-list .question__answer button {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+}
+.question-box__question-list .question__answer button:hover {
+  background: #e6f2ff;
+  border-color: #007acc;
+}
+.question-box__feedback {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=button.css.map */

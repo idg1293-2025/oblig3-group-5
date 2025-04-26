@@ -1,0 +1,82 @@
+.question-box {
+    position: relative;
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    background: #f9f9f9;
+    transition: background 0.3s;
+  
+    &__button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: background 0.3s;
+  
+      &:hover {
+        background: #005fa3;
+      }
+    }
+  
+    &__question {
+      display: none;
+      margin-top: 2rem;
+  
+      &.visible {
+        display: block;
+        animation: fadeIn 0.5s ease;
+      }
+  
+      &-text {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+  
+      &-list {
+        list-style: none;
+        padding: 0;
+  
+        & .question__answer {
+          margin-bottom: 0.5rem;
+  
+          button {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: background 0.3s, border-color 0.3s;
+  
+            &:hover {
+              background: #e6f2ff;
+              border-color: #007acc;
+            }
+          }
+        }
+      }
+    }
+  
+    &__feedback {
+      margin-top: 1rem;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+  
+  // Enkel fade-in animasjon
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  

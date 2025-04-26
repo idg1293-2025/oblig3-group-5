@@ -7,36 +7,68 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/components/buildings.css">
     <link rel="stylesheet" href="styles/base/global.css">
-    <script defer src="styles/script.js"></script>
+    <link rel="stylesheet" href="styles/components/scene.css">
+    <link rel="stylesheet" href="styles/components/button.css">
 </head>
 <body>
-    <div class="scroll-">
-    <div class="parent">
-    <div class="parent__1 scene__1">
-        <h1>Think twice..</h1>
-        <p class="info">E-commerce currently accounts for approximately 3% of global CO₂ 
-            emissions, with projections indicating this figure could rise to 17% by 2050 
-            if current trends persist
-        </p>
+    <div class="scene__1">
+        <h1 class="header">Header</h1>
+        <div class="question-container">
+            <button class="question-button" onclick="showQuestion(this)">!</button>
+            <div class="question">
+              <p class="question__text">How many packages are ordered globally every year via the internet?</p>
+              <ul class="question__list">
+                <li class="question__answer"><button onclick="checkAnswer(this, 'd')">10 billion</button></li>
+                <li class="question__answer"><button onclick="checkAnswer(this, 'd')">25 billion</button></li>
+                <li class="question__answer"><button onclick="checkAnswer(this, 'd')">50 billion</button></li>
+                <li class="question__answer"><button onclick="checkAnswer(this, 'd')">100 billion</button></li>
+              </ul>
+            </div>
+            <div class="question__feedback"></div>
+          </div>
+          
+        <img src="./styles/images/window-01.svg" alt="" class="window">
+        <div class="floor-line"></div>
         <img src="./styles/images/woman-ordering-01.svg" alt="" class="person-ordering">
+        <img src="./styles/images/package-01.svg" alt="" class="package">
     </div>
-    <div class="parent__2 scene">
-        <img src="./styles/images/package-01.svg" alt="">
-        kjører med bil
+
+    
+    <div class="scene__2">
+        <div class="question-container"></div>
+        <div>
+            <img src="./styles/images/post-office.png" alt="" class="post-office">
+        </div>
+        <div class="road">
+            <div class="road__lane-line"></div>
+            <div class="road__side-line-left"></div>
+            <div class="road__side-line-right"></div>
+            <img src="styles/images/truck.svg" alt="car" class="car">
+            <img src="styles/images/oil-spill.svg" alt="" class="oil-spill">
+            <div class="question-box__2">
+                <button class="question-button" onclick="showQuestion()">!</button>
+                <div class="question">
+                    <p class="question__text">Spørsmål her: </p>
+                    <ul class="question__list">
+                        <li class="question__answer"><button onclick="checkAnswer('a')">10 billion</button></li>
+                        <li class="question__answer"><button onclick="checkAnswer('b')">25 billion</button></li>
+                        <li class="question__answer"><button onclick="checkAnswer('c')">50 billion</button></li>
+                        <li class="question__answer"><button onclick="checkAnswer('d')">100 billion</button></li>
+                    </ul>
+                </div>
+            </div>
+          </div>
     </div>
-    <div class="parent__3 scene__2">
-        fly
+    <div class="scene__3">
+        <img src="styles/images/cargoplane-01.svg" alt="plane" class="plane">
         <div class="city">
             <div class="city__building--short"></div>
             <div class="city__building--medium"></div>
             <div class="city__building--tall"></div>
         </div>
     </div>
-    <div class="scene scene4">
-        Kommer fram og skal sendes i retur
+    <div class="scene__4">
     </div>
-    </div>
-    </div>
-    <script defer src="script.js"></script>
+    <script src="styles/script.js" defer></script>
 </body>
 </html>
