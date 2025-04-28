@@ -10,40 +10,55 @@
       #deb887 100%
     );
     .window {
-      width: 20vw;
+      width: 30vh;
       position: absolute;
-      left: 60vw;
+      left: 48vw;
       top: 15vh;
     }
     .person-ordering {
-      width: 35%;
+      width: 50vh;
+      height: auto;
       position: absolute;
+      justify-content: center;
       top: 50%;
-      left: 25%;
+      left: 22%;
       animation: slideInLeft 2s ease-out forwards;
       opacity: 0;
     }
-    .exclamation-mark1 {
+
+    .package-box {
+      width: 8vh;
       position: absolute;
-      width: 2%;
       top: 55%;
-      left: 47.1%;
-      z-index: 5;
-      opacity: 0;
-      animation: packagePopUp 3s ease-out forwards;
-      animation-delay: 2.2s;
-    }
-    
-    .package {
-      position: absolute;
-      width: 15%;
-      top: 55%;
-      left: 48.5%;
+      left: 36.5%;
       transform: translate(-50%, 60px);
       opacity: 0;
       z-index: 5;
       animation: packagePopUp 3s ease-out forwards;
-      animation-delay: 2.2s;   
+      animation-delay: 2.2s;
+    }
+
+    .package {
+      position: absolute;
+      top: 40%;
+      left: 52%;
+      transform: translate(-50%, 0);
+      background: rgba(255, 255, 255, 0.95);
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 200px;
+      text-align: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      z-index: 10;
+      font-size: 2vh;
+    }
+
+    .package-box:hover + .package {
+      opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -57,11 +72,27 @@
       lightblue 100%
     );
 
-    .post-office {
-      width: 30vw;
+    .info-box2 {
       position: absolute;
-      top: 123vh;
-      left: 23.5vw;
+      top: 110vh;
+      left: 20vw;
+      width: 70%;
+      background: white;
+      color: black;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      font-size: 1em;
+      z-index: 1;
+    }
+
+    .post-office {
+      width: 50vh;
+      height: auto;
+      position: absolute;
+      top: 133vh;
+      left: 20.5vw;
+      z-index: 0;
     }
 
     .trees {
@@ -100,6 +131,19 @@
       &__8 {
         top: 50vh;
         left: 35vw;
+      }
+      &__9 {
+        top: 1350vh;
+        right: 35vw;
+      }
+      &__10 {
+        top: 1400vh;
+        left: 35vw;
+        z-index: 3;
+      }
+      &__11 {
+        top: 1410vh;
+        right: 35vw;
       }
     }
 
@@ -149,7 +193,7 @@
         position: sticky;
         width: 27%;
         top: 50%;
-        z-index: 2;
+        z-index: 0;
         animation: truckScrollMotion linear forwards;
         animation-timeline: scroll();
         animation-range: 0% 100%;
@@ -181,6 +225,34 @@
       animation: planeScrollMotion linear forwards;
       animation-timeline: scroll();
       animation-range: 10% 100%;
+    }
+
+    .info-box3 {
+      position: absolute;
+      top: 630vh;
+      left: 5vw;
+      width: 50%;
+      background: white;
+      color: black;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      font-size: 1em;
+      z-index: 2;
+    }
+
+    .info-box4 {
+      position: absolute;
+      top: 820vh;
+      left: 35vw;
+      width: 50%;
+      background: white;
+      color: black;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      font-size: 1em;
+      z-index: 2;
     }
     .clouds {
       .cloud {
@@ -274,7 +346,7 @@
       }
     }
   }
-  
+
   &__4 {
     height: 200vh;
     background-color: rgb(170, 200, 102);
@@ -287,7 +359,7 @@
       top: -35.5%;
       left: 5%;
       z-index: 1;
-    
+
       &__lane-line {
         position: absolute;
         top: 0;
@@ -304,7 +376,7 @@
         );
         transform: translateX(-50%);
       }
-    
+
       &__side-line-left,
       &__side-line-right {
         position: absolute;
@@ -313,22 +385,36 @@
         height: 100%;
         background: white;
       }
-    
+
       &__side-line-left {
         left: 5px;
       }
-    
+
       &__side-line-right {
         right: 5px;
       }
     }
     .truck--4 {
       position: sticky;
-      top: 10%;
+      top: 30%;
       margin: 0 auto;
       width: 10%;
       z-index: 2;
-      transform: translateX(450%)
+      transform: translateX(350%);
+    }
+
+    .info-box5 {
+      position: absolute;
+      top: 1550vh;
+      left: 45vw;
+      width: 50%;
+      background: white;
+      color: black;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      font-size: 1em;
+      z-index: 2;
     }
 
     .house--1 {
@@ -338,17 +424,7 @@
       left: 0%;
       transform: scaleX(-1);
     }
-
-    .package--2 {
-      position: absolute;
-      width: 15%;
-      top: 1663vh;
-      left: 44%;
-      opacity: 1;
-      z-index: 5;   
-    }
   }
-   
 
   &__5 {
     height: 100vh;
@@ -360,14 +436,85 @@
       #deb887 100%
     );
     .window {
-      width: 20vw;
+      width: 40vh;
       position: absolute;
-      left: 60vw;
-      top: 1700vh;
+      left: 38vw;
+      top: 1710vh;
+    }
+    .chill-woman {
+      position: absolute;
+      width: 60vh;
+      top: 1750vh;
+      left: 10vw;
+
+      &__bubble {
+        position: absolute;
+        color: black;
+        background-color: white;
+        padding: 0.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        max-width: 70%;
+        top: 1742vh;
+        left: 10vw;
+      }
+    }
+
+    .pink-tshirt {
+      width: 20vh;
+      position: absolute;
+      top: 1765vh;
+      left: 17vh;
+      z-index: 5;
+
+      &:hover + .chill-woman__bubble + .tshirt-message {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+
+    .tshirt-message {
+      position: absolute;
+      top: 1750vh;
+      left: 5vh;
+      max-width: 120%;
+      background: white;
+      color: black;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+      font-size: 1.2rem;
+      z-index: 10;
     }
   }
 }
 
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+  
+@keyframes packagePopUp {
+  0% {
+    transform: translate(-50%, 20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -80px);
+    opacity: 1;
+  }
+}
 
 @keyframes truckScrollMotion {
   0% {
@@ -410,7 +557,6 @@
   }
 }
 
-
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -420,5 +566,20 @@
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes packagePopLeft {
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  30% {
+    transform: translate(-50%, -30px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-80%, -30px); /* move more left */
+    opacity: 1;
   }
 }

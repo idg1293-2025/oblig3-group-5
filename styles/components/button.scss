@@ -1,15 +1,18 @@
 .question-container {
-	
+  position: absolute;
+  display: inline-block;
+
   .question-button {
     background: #007acc;
     border: none;
-    border-radius: 30%;
-    width: 3rem;
-    height: 3rem;
+    border-radius: 40%;
+    width: 2em;
+    height: 2em;
     font-size: 1.5rem;
     color: white;
+    z-index: 10;
     cursor: pointer;
-    margin: 1rem auto;
+    transition: background 0.3s;
 
     &:hover {
       background: #005fa3;
@@ -17,19 +20,36 @@
   }
 
   .question {
-    position: relative;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: #fff;
     border-radius: 1em;
-    padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.5s ease forwards;
-    max-width: 90%;
-    margin: 0 auto;
-
+    padding: 1em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 60%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  
     &.hidden {
-      display: none;
+      opacity: 0;
+      pointer-events: none;
     }
-
+  
+    &:not(.hidden) {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  
     .question-close {
       position: absolute;
       top: 1rem;
@@ -39,7 +59,6 @@
       font-size: 1.5rem;
       cursor: pointer;
       color: #999;
-      transition: color 0.2s;
 
       &:hover {
         color: #333;
@@ -50,26 +69,24 @@
       font-weight: bold;
       margin-bottom: 1rem;
       font-size: 1.2rem;
-      text-align: center;
     }
 
     .question__list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
+      gap: 0.5em;
       list-style: none;
-      padding: 0;
-      width: 100%;
+      max-width: 90%;
 
       .question__answer {
         button {
           background: #f0f0f0;
           border: 1px solid #ccc;
           border-radius: 1em;
-          padding: 0.8rem;
-          font-size: 1rem;
           cursor: pointer;
+          transition: background 0.3s, border-color 0.3s;
           width: 100%;
+          padding: 0.5em;
 
           &:hover {
             background: #e6f2ff;
@@ -101,9 +118,8 @@
       display: none;
     }
   }
-}
 
-// Fade-in animasjon
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -113,4 +129,18 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.q1 {
+  top: 20vh;
+  left: 10vw;
+}
+.q2 {
+  top: 150vh;
+  left: 50vw;
+  z-index: 1;
+}
+.q3 {
+  top: 190vh;
+  left: 12vh;
 }

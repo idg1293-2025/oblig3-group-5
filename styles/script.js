@@ -3,9 +3,12 @@ function showQuestion(button) {
 	const question = container.querySelector('.question');
 	const feedback = container.querySelector('.question__feedback');
   
+	// Fjern 'hidden' klassen for å vise popupen
 	question.classList.remove('hidden');
 	feedback.classList.remove('hidden');
-	button.style.display = 'none'; // Skjul spørsmåls-knappen etterpå
+	
+	// Skjul knappen etter at popupen vises
+	button.style.display = 'none'; // Skjuler spørsmåls-knappen
   }
   
   function checkAnswer(button) {
@@ -32,10 +35,10 @@ function showQuestion(button) {
   function closeQuestion(closeButton) {
 	const container = closeButton.closest('.question-container');
 	const question = container.querySelector('.question');
-	const feedback = container.querySelector('.question__feedback');
 	const questionButton = container.querySelector('.question-button');
   
+	// Skjul spørsmålet og vis knappen igjen
 	question.classList.add('hidden');
-	feedback.classList.add('hidden');
-	questionButton.style.display = 'inline-block'; // Vis spørsmåls-knappen igjen
+	questionButton.style.display = 'inline-block'; // Vist spørsmåls-knappen igjen
   }
+  
