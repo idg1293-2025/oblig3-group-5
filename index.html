@@ -9,31 +9,37 @@
     <link rel="stylesheet" href="styles/base/global.css">
     <link rel="stylesheet" href="styles/components/scene.css">
     <link rel="stylesheet" href="styles/components/button.css">
+    <script src="styles/script.js" defer></script>
 </head>
 <body>
     <div class="scene__1">
-      <div class="question-container">
-        <button class="question-button" onclick="openModal()">!</button>
+      <div class="question-container question1" data-correct-answer="100 billion">
+        <button class="question-button" onclick="showQuestion(this)">!</button>  
       
-        <div class="modal hidden">
-          <div class="modal-content">
-            <button class="close-button" onclick="closeModal()">X</button>
-            <div class="question" data-correct-answer="100 billion">
-              <p class="question__text">How many packages are ordered globally every year via the internet?</p>
-              <ul class="question__list">
-                <li class="question__answer"><button onclick="checkAnswer(this)">10 billion</button></li>
-                <li class="question__answer"><button onclick="checkAnswer(this)">25 billion</button></li>
-                <li class="question__answer"><button onclick="checkAnswer(this)">50 billion</button></li>
-                <li class="question__answer"><button onclick="checkAnswer(this)">100 billion</button></li>
-              </ul>
-              <div class="question__feedback"></div>
-            </div>
-          </div>
+        <div class="question hidden">
+        <button class="question-close" onclick="closeQuestion(this)">✖</button>
+        <p class="question__text">How many packages are ordered globally every year via the internet?</p>
+        <ul class="question__list">
+          <li class="question__answer">
+          <button onclick="checkAnswer(this)">10 billion</button>
+          </li>
+          <li class="question__answer">
+          <button onclick="checkAnswer(this)">25 billion</button>
+          </li>
+          <li class="question__answer">
+          <button onclick="checkAnswer(this)">50 billion</button>
+          </li>
+          <li class="question__answer">
+          <button onclick="checkAnswer(this)">100 billion</button>
+          </li>
+        </ul>
         </div>
+        <div class="question__feedback hidden"></div>
       </div>
-       
+      
+      <img src="styles/images/exclamation mark-01.svg" alt="!" class="exclamation-mark1">
+      <p class="package-fact">"E-commerce currently accounts for about 3% of global CO₂ emissions, by 2050, emissions from deliveries could grow to 17% of all transport emissions if trends continue."</p>
       <img src="./styles/images/window-01.svg" alt="Window" class="window">
-      <div class="floor-line"></div>
       <img src="./styles/images/woman-ordering-01-01.svg" alt="Woman ordering" class="person-ordering">
       <img src="./styles/images/package-01.svg" alt="Package" class="package">
     </div>
@@ -41,6 +47,7 @@
     <div class="scene__2">
       <div>
         <img src="./styles/images/post-office.png" alt="The post office" class="post-office">
+      
       </div>
       <div class="road">
         <div class="trees">
@@ -56,7 +63,7 @@
         <div class="road__lane-line"></div>
         <div class="road__side-line-left"></div>
         <div class="road__side-line-right"></div>
-        <img src="styles/images/truck.svg" alt="truck" class="truck">
+        <img src="styles/images/truck.svg" alt="truck" class="truck--1">
         <img src="styles/images/oil-spill.svg" alt="Oil spill" class="oil-spill">
       </div>
     </div>
@@ -68,12 +75,37 @@
         <img src="styles/images/cloud-01.svg" alt="clouds" class="cloud clouds__2">
         <img src="styles/images/cloud-01.svg" alt="clouds" class="cloud clouds__3">
         <img src="styles/images/cloud-01.svg" alt="clouds" class="cloud clouds__4">
+        <img src="styles/images/cloud-01.svg" alt="clouds" class="cloud clouds__5">
+        <img src="styles/images/cloud-01.svg" alt="clouds" class="cloud clouds__6">
+        <img src="styles/images/cloud-01.svg" alt="clouds" class="cloud clouds__7">
+        <img src="styles/images/cloud-01.svg" alt="clouds" class="cloud clouds__8">
+        <img src="styles/images/cloud-01.svg" alt="clouds" class="cloud clouds__9">
+        <img src="styles/images/cloud-01.svg" alt="clouds" class="cloud clouds__10">
+        <img src="styles/images/cloud-01.svg" alt="clouds" class="cloud clouds__11">
+        <img src="styles/images/cloud-01.svg" alt="clouds" class="cloud clouds__12">
       </div>
+      <div class="airstrip">
+        <div class="airstrip__startlines"></div>
+        <div class="airstrip__light--left"></div>
+      </div>
+      <div class="airstrip__light--right"></div>
+    </div>
+
+    <div class="scene__4">
+  
+      <img src="styles/images/truck.svg" alt="" class="truck--4">
+      <div class="road--2">
+        <div class="road--2__lane-line"></div>
+        <div class="road--2__side-line-left"></div>
+        <div class="road--2__side-line-right"></div>
+      </div>
+      <img src="styles/images/house-01-01.svg" alt="" class="house--1">
+      <img src="styles/images/package-01.svg" alt="" class="package--2">
+    </div>
+    <div class="scene__5">
+      <img src="styles/images/window-01.svg" alt="Window" class="window">
     </div>
     
-    <div class="scene__4">
-    </div>
-    <div class="scene__5"></div>
-    <script src="styles/script.js" defer></script>
+    
 </body>
 </html>
