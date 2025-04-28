@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .scene {
   width: 100%;
 }
@@ -6,29 +5,78 @@
   height: 100vh;
   background: linear-gradient(to bottom, #b0c4de 0%, #b0c4de 70%, #deb887 70%, #deb887 100%);
 }
-.scene__1.header {
-  align-items: center;
-}
 .scene__1 .window {
-  width: 50%;
-  top: 4%;
-  left: 25%;
+  width: 20vw;
   position: absolute;
+  left: 60vw;
+  top: 15vh;
+}
+.scene__1 .person-ordering {
+  width: 30vw;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  animation: slideInLeft 2s ease-out forwards;
+  opacity: 0;
+}
+.scene__1 .package {
+  position: absolute;
+  width: 15%;
+  top: 55%;
+  left: 50.5%;
+  transform: translate(-50%, 60px);
+  opacity: 0;
+  z-index: 5;
+  animation: packagePopUp 3s ease-out forwards;
+  animation-delay: 2.2s;
 }
 .scene__2 {
   height: 400vh;
-  background: linear-gradient(to bottom, rgb(170, 200, 102), lightblue);
+  background: linear-gradient(to bottom, rgb(170, 200, 102) 0%, rgb(170, 200, 102) 95%, lightblue 98%, lightblue 100%);
 }
-.scene__3 {
-  height: 400vh;
-  background: linear-gradient(to bottom, lightblue, rgb(39, 175, 221));
+.scene__2 .post-office {
+  width: 30vw;
+  position: absolute;
+  top: 130vh;
+  left: 23.5vw;
 }
-.scene__4 {
-  height: 200vh;
-  background: lightblue;
+.scene__2 .trees .tree {
+  position: absolute;
+  width: 25vw;
 }
-
-.road {
+.scene__2 .trees__1 {
+  top: 100vh;
+  right: 35vw;
+}
+.scene__2 .trees__2 {
+  top: 150vh;
+  left: 35vw;
+}
+.scene__2 .trees__3 {
+  top: 200vh;
+  right: 35vw;
+}
+.scene__2 .trees__4 {
+  top: 250vh;
+  left: 35vw;
+}
+.scene__2 .trees__5 {
+  top: -75vh;
+  right: 35vw;
+}
+.scene__2 .trees__6 {
+  top: -55vh;
+  left: 35vw;
+}
+.scene__2 .trees__7 {
+  top: 5vh;
+  right: 35vw;
+}
+.scene__2 .trees__8 {
+  top: 50vh;
+  left: 35vw;
+}
+.scene__2 .road {
   background-color: #504a4a;
   height: 400vh;
   width: 30%;
@@ -36,16 +84,16 @@
   margin: 0 auto;
   top: 20%;
 }
-.road__lane-line {
+.scene__2 .road__lane-line {
   position: absolute;
   top: 0;
   left: 50%;
   width: 0.5em;
   height: 100%;
-  background: repeating-linear-gradient(to bottom, yellow, yellow 20px, transparent 20px, transparent 40px);
+  background: repeating-linear-gradient(to bottom, yellow, yellow 1.25em, transparent 1.25em, transparent 2.5em);
   transform: translateX(-50%);
 }
-.road__side-line-left {
+.scene__2 .road__side-line-left {
   position: absolute;
   left: 5px;
   top: 0;
@@ -53,7 +101,7 @@
   height: 100%;
   background: white;
 }
-.road__side-line-right {
+.scene__2 .road__side-line-right {
   position: absolute;
   right: 5px;
   top: 0;
@@ -61,8 +109,7 @@
   height: 100%;
   background: white;
 }
-
-.car {
+.scene__2 .road .truck {
   position: sticky;
   width: 27%;
   top: 50%;
@@ -73,51 +120,95 @@
   animation-timeline: scroll();
   animation-range: 0% 100%;
 }
+.scene__2 .road .oil-spill {
+  position: absolute;
+  width: 40%;
+  top: 55%;
+  left: 5%;
+}
+.scene__3 {
+  height: 600vh;
+  background: linear-gradient(to bottom, lightblue, rgb(39, 175, 221));
+}
+.scene__3 .plane {
+  position: sticky;
+  z-index: 3;
+  top: 60%;
+  width: 45%;
+  left: 65%;
+  transform: translateX(-50%);
+  animation: planeScrollMotion linear forwards;
+  animation-timeline: scroll();
+  animation-range: 10% 100%;
+}
+.scene__3 .clouds .cloud {
+  position: absolute;
+  width: 20%;
+}
+.scene__3 .clouds__1 {
+  top: 600vh;
+  left: 30vw;
+  animation: float 10s ease-in-out infinite;
+}
+.scene__3 .clouds__2 {
+  top: 630vh;
+  right: 20vw;
+  animation: float 15s ease-in-out infinite;
+}
+.scene__3 .clouds__3 {
+  top: 650vh;
+  right: 10vw;
+  animation: float 12s ease-in-out infinite;
+}
+.scene__3 .clouds__4 {
+  top: 670vh;
+  left: 15vw;
+  animation: float 10s ease-in-out infinite;
+}
+.scene__4 {
+  height: 200vh;
+  background: linear-gradient(to bottom, #b0c4de 0%, #b0c4de 70%, #deb887 70%, #deb887 100%);
+}
 
 @keyframes truckScrollMotion {
   0% {
     transform: translate(4vw, -22%);
   }
   20% {
-    transform: translate(4vw, -22%); /* ➡ goes right */
+    transform: translate(4vw, -22%);
   }
   30% {
-    transform: translate(20vw, -48%); /* ➡ goes far right */
+    transform: translate(20vw, -48%);
   }
   35% {
-    transform: translate(4vw, -48%); /* ➡ goes far right */
+    transform: translate(4vw, -48%);
   }
   60% {
-    transform: translate(4vw, -14%); /* ⬅ goes left */
+    transform: translate(4vw, -14%);
   }
   80% {
-    transform: translate(60vw, -10%); /* ⬇ returns to lane, further down */
+    transform: translate(40vw, -30%);
   }
 }
-.oil-spill {
-  position: absolute;
-  width: 40%;
-  top: 42%;
-  left: 5%;
-}
-
-.plane {
-  position: sticky;
-  z-index: 3;
-  top: 60%;
-  width: 45%;
-  left: 43.5%;
-  transform: translateX(-50%);
-  animation: planeScrollMotion linear forwards;
-  animation-timeline: scroll();
-  animation-range: 10% 100%;
-}
-
 @keyframes planeScrollMotion {
   0% {
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: translate(-50%, -50%) scale(0.1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
   }
   100% {
-    transform: translate(-50%, -60%) scale(1);
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(2em);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }/*# sourceMappingURL=scene.css.map */
