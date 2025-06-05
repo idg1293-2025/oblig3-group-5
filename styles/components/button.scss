@@ -46,7 +46,7 @@
   
     &:not(.hidden) {
       opacity: 1;
-      pointer-events: auto;
+      pointer-events: visible;
     }
   }
   
@@ -73,7 +73,7 @@
 
     .question__list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
       gap: 0.5em;
       list-style: none;
       max-width: 90%;
@@ -118,18 +118,6 @@
       display: none;
     }
   }
-
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 .q1 {
   top: 60%;

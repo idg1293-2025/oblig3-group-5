@@ -225,9 +225,6 @@
       width: 45%;
       left: 65%;
       transform: translateX(-50%);
-      animation: planeScrollMotion linear forwards;
-      animation-timeline: scroll();
-      animation-range: 10% 100%;
     }
 
     .info-box3 {
@@ -528,21 +525,6 @@
   100% {
     transform: translate(-50%, -80px);
     opacity: 1;
-  }
-}
-
-@keyframes planeScrollMotion {
-  0% {
-    transform: translate(-50%, -50%) scale(0.7);
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.2);
-  }
-  60% {
-    transform: translate(-50%, -50%) scale(0.9);
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(0.6);
   }
 }
 

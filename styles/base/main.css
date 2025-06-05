@@ -211,7 +211,7 @@ img {
 }
 .question-container .question:not(.hidden) {
   opacity: 1;
-  pointer-events: auto;
+  pointer-events: visible;
 }
 .question-container .question-close {
   position: absolute;
@@ -233,7 +233,7 @@ img {
 }
 .question-container .question__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
   gap: 0.5em;
   list-style: none;
   max-width: 90%;
@@ -271,16 +271,6 @@ img {
   display: none;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 .q1 {
   top: 60%;
   left: 10%;
@@ -499,9 +489,6 @@ img {
   width: 45%;
   left: 65%;
   transform: translateX(-50%);
-  animation: planeScrollMotion linear forwards;
-  animation-timeline: scroll();
-  animation-range: 10% 100%;
 }
 .scene__3 .info-box3 {
   position: absolute;
@@ -770,20 +757,6 @@ img {
   100% {
     transform: translate(-50%, -80px);
     opacity: 1;
-  }
-}
-@keyframes planeScrollMotion {
-  0% {
-    transform: translate(-50%, -50%) scale(0.7);
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.2);
-  }
-  60% {
-    transform: translate(-50%, -50%) scale(0.9);
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(0.6);
   }
 }
 @keyframes float {
