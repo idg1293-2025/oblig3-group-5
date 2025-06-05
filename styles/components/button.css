@@ -65,7 +65,7 @@
 }
 .question-container .question__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
   gap: 0.5em;
   list-style: none;
   max-width: 90%;
@@ -114,17 +114,17 @@
   }
 }
 .q1 {
-  top: 20vh;
-  left: 10vw;
+  top: 60%;
+  left: 10%;
 }
 
 .q2 {
-  top: 150vh;
+  top: 165vh;
   left: 50vw;
   z-index: 1;
 }
 
 .q3 {
   top: 190vh;
-  left: 12vh;
+  left: 20vw;
 }/*# sourceMappingURL=button.css.map */
